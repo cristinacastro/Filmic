@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import logoImg from "../img/logo.jpg";
 import { Card, Form, Input, Button, Error } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
 
-function Login() {
+function Login(props) {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [isError, setIsError] = useState(false);
   const [email, setEmail] = useState("");
@@ -13,6 +12,8 @@ function Login() {
   const { setAuthTokens } = useAuth();
   const apiurl =
     "https://front-assignment.planetdataset.com/api/v1/candidates/42b619d4-e3b0-445c-89de-e0cf4261ee5a/users/login";
+
+  const referer = props.location.state.referer || "/";
 
   function postLogin() {
     axios
@@ -34,7 +35,7 @@ function Login() {
   }
 
   if (isLoggedIn) {
-    return <Redirect to="/" />;
+    return <Redirect to={referer} />;
   }
 
   return (
