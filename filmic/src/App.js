@@ -8,8 +8,17 @@ import Login from "./pages/Login";
 import Signup from './pages/Signup';
 
 function App(props) {
+
+  const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  const [authTokens, setAuthTokens] = useState(existingTokens);
+  
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  }
+
   return (
-    <AuthContext.Provider value={false}>
+    <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
       <Router>
         <div>
           <ul>
