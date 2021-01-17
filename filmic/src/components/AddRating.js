@@ -14,7 +14,7 @@ class AddRating extends Component {
 
   getTheRatedMovie(){
     const { params } = this.props.match;
-    BookingService.getTheMovie(params.movie_id).then((data) => {
+    Service.getTheMovie(params.movie_id).then((data) => {
       this.setState({ movieInfo: data});
     });
   }
@@ -28,7 +28,7 @@ class AddRating extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { params } = this.props.match;
-    BookingService.addNewRate(
+    Service.addNewRate(
       params.movie_id,
       this.state.score
     ).then((data) => this.props.history.push("/home"));
@@ -45,6 +45,15 @@ render(){
     <div>
       <h2>How much have you enjoyed this movie?</h2>
       <form onSubmit={(e) => this.handleSubmit(e)}>
+          <input
+        <label>Review:</label>
+          <input
+            required
+            type="text"
+            defaultValue={this.state.review.review}
+            onChange={(e) => this.handleInputChange(e, "review")}
+          /><br/>
+          <label>Rating:</label>
           <input
             required
             type="number"
