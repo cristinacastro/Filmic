@@ -60,7 +60,7 @@ function Login(props) {
         <Button onClick={postLogin}>Sign In</Button>
       </Form>
       <Link to="/signup">Don't have an account?</Link>
-      {isError && <Error>The email or password provided were incorrect!</Error>}
+      {/* {isError && <Error>The email or password provided were incorrect!</Error>} */}
     </Card>
   );
 }
