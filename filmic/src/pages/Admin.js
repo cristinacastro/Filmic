@@ -16,45 +16,21 @@ class Admin extends Component {
     this.getRandomMovie();
   }
 
-  getAllMovies = async () => {
-    try {
-      const res = await axios({
-        method: "GET",
-        url:
-          "https://front-assignment.planetdataset.com/api/v1/candidates/42b619d4-e3b0-445c-89de-e0cf4261ee5a/movies",
-        headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZWI1Mjg4OGEtMWU3My00OGIwLWFlNmYtYzBjODkwYmIyMTU4In0._TY6o42XCCb9PBvkFjvl9XLZ00qGThViyjMWdcZ2GTs",
-        },
-      });
+  getAllMovies () {
+    Service.getAllMovies().then((data) => {
       this.setState({
-        movies: res.data,
+        movies: data,
       });
-      console.log(this.state.movies, "peliculas");
-    } catch (error) {
-      console.log(error, "Ha habido un error al cargar las películas.");
-    }
-  };
+    })
+  }
 
-  getRandomMovie = async () => {
-    try {
-      const res = await axios({
-        method: "GET",
-        url:
-          "https://front-assignment.planetdataset.com/api/v1/candidates/42b619d4-e3b0-445c-89de-e0cf4261ee5a/movies/random_unrated",
-        headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZWI1Mjg4OGEtMWU3My00OGIwLWFlNmYtYzBjODkwYmIyMTU4In0._TY6o42XCCb9PBvkFjvl9XLZ00qGThViyjMWdcZ2GTs",
-        },
-      });
+  getRandomMovie () {
+    Service.getRandomUnratedMovie().then((data) => {
       this.setState({
-        randomMovie: res.data,
+        randomMovie: data,
       });
-      console.log(this.state.randomMovie, "pelicula random");
-    } catch (error) {
-      console.log(error, "Ha habido un error al cargar las películas.");
-    }
-  };
+    })
+  }
 
   render() {
     return (
@@ -67,8 +43,14 @@ class Admin extends Component {
         </section>
 
         <section>
+          <form>
+            Buscador
+          </form>
+
+        </section>
+        <section>
         <h2>Latest releases</h2>
-          {this.state.movies.map((eachMovie) => {
+          {this.state.movies.slice(0,8).map((eachMovie) => {
             return (
               <div key={eachMovie.id}>
               <img src={eachMovie.poster_url} />

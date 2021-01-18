@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./Login";
-import Signup from './Signup';
+import Signup from "./Signup";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 
 function Home(props) {
@@ -8,14 +8,14 @@ function Home(props) {
     <div>
       <div>Welcome to Filmic</div>
       <Router>
-      <ul>
-            <li>
-              <Link to="/signup">Sign up</Link>
-            </li>
-            <li>
-              <Link to="/login">Log in</Link>
-            </li>
-          </ul>
+        <ul>
+          <li>
+            <Link to="/signup">Sign up</Link>
+          </li>
+          <li>
+            <Link to="/login">Log in</Link>
+          </li>
+        </ul>
         <div>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
