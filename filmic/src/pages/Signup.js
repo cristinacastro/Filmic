@@ -18,10 +18,12 @@ function Signup() {
       function postSignup() {
         axios
           .post(apiurl, {
+            user: {
             first_name,
             last_name,
             email,
             password
+          }
           })
           .then((result) => {
             if (result.status === 200) {

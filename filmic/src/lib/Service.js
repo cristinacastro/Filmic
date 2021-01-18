@@ -6,6 +6,7 @@ class Service {
       baseURL:
         "https://front-assignment.planetdataset.com/api/v1/candidates/42b619d4-e3b0-445c-89de-e0cf4261ee5a",
       withCredentials: true,
+   
     });
   }
 
@@ -20,30 +21,30 @@ class Service {
     return data;
   }
 
-  async addNewRate() {
+/*   async addNewRate() {
     const { data } = await this.axios.post(`/movies/${movie_id}/rate`);
     return data;
-  }
+  } */
 
   async getRatedMovies() {
     const { data } = await this.axios.get("/movies/rated");
     return data;
   }
 
-  async getTheMovie() {
+ /*  async getTheMovie() {
     const { data } = await this.axios.get(`/movies/${movie_id}`);
     return data;
-  }
+  } */
 
   async getAllRates() {
     const { data } = await this.axios.get("/ratings");
     return data;
   }
 
-  async getTheRate() {
+/*   async getTheRate() {
     const { data } = await this.axios.get(`/ratings/${rating_id}`);
     return data;
-  }
+  } */
 }
 
 
