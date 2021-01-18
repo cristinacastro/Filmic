@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { Component } from "react";
 import Service from "../lib/Service";
 import NavBar from "../components/Navbar";

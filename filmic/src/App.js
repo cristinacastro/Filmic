@@ -6,7 +6,7 @@ import Admin from './pages/Admin';
 import { AuthContext } from "./context/auth";
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
-import Navbar from "./components/Navbar"
+import Movies from "./pages/Movies"
 
 function App(props) {
 
@@ -26,6 +26,8 @@ function App(props) {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <PrivateRoute path="/admin" component={Admin} />
+          <PrivateRoute path="/movies" component={Movies} />
+
         </div>
       </Router>
     </AuthContext.Provider>

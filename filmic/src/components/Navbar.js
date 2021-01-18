@@ -16,8 +16,8 @@ function Navbar() {
           <Link to='/admin'>
             <li>Logo</li>
           </Link>
-          <Link to='/favorites'>
-            <li>Favorites</li>
+          <Link to='/movies'>
+            <li>My Movies</li>
           </Link>
           <Link to='/ratings'>
             <li>My ratings</li>
