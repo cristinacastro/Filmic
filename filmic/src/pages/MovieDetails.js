@@ -14,6 +14,7 @@ export default function MovieDetails (props){
   console.log(movieFound, "pelicula trobada")
 
 
+
   return (
     <div>
     <NavBar />
@@ -28,7 +29,7 @@ export default function MovieDetails (props){
       <p>{movieFound.url}</p>
 
       <div>Valora la película 
-      <AddRating /></div>
+      <AddRating {...props}/></div>
 
 
     </div>

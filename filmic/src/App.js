@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Signup from './pages/Signup';
 import Movies from "./pages/Movies"
 import MovieDetails from "./pages/MovieDetails"
+import Ratings from "./pages/Ratings"
 
 function App(props) {
 
@@ -29,6 +30,7 @@ function App(props) {
           <PrivateRoute path="/admin" component={Admin} />
           <PrivateRoute exact path="/movies" component={Movies} />
           <PrivateRoute exact path="/movies/:id" component={MovieDetails} />
+          <PrivateRoute path="/ratings" component={Ratings} />
 
         </div>
       </Router>
