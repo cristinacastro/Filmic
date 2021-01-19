@@ -3,7 +3,6 @@ import Service from "../lib/Service";
 import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
-
 class Admin extends Component {
   state = {
     movies: [],
@@ -49,14 +48,17 @@ class Admin extends Component {
         </section>
         <section>
         <h2>Latest releases</h2>
-          {this.state.movies.slice(0,8).map((eachMovie) => {
+        {this.state.movies.map((eachMovie) => {
             return (
               <div key={eachMovie.id}>
-              <img src={eachMovie.poster_url} />
-                <p>{eachMovie.title}</p>
-                <Link to={`/movies/${eachMovie._id}`}>See film</Link> 
+              <Link to={{pathname:`/movies/${eachMovie.id}`, state: {moviesState:this.state.movies}}}>
+                <img src={eachMovie.poster_url}/>
+                <h3>{eachMovie.title}</h3>
+                <p>See movie</p>
+                </Link>
+
               </div>
-            );
+            )
           })}
         </section>
       </div>

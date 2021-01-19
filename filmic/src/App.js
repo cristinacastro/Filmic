@@ -7,6 +7,7 @@ import { AuthContext } from "./context/auth";
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
 import Movies from "./pages/Movies"
+import MovieDetails from "./pages/MovieDetails"
 
 function App(props) {
 
@@ -26,7 +27,8 @@ function App(props) {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <PrivateRoute path="/admin" component={Admin} />
-          <PrivateRoute path="/movies" component={Movies} />
+          <PrivateRoute exact path="/movies" component={Movies} />
+          <PrivateRoute exact path="/movies/:id" component={MovieDetails} />
 
         </div>
       </Router>

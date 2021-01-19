@@ -27,10 +27,10 @@ class Service {
   getRatedMovies() {
     return this.axios.get("/movies/rated").then(({ data }) => data);
   }
-
+/* 
   getTheMovie(movie_id) {
     return this.axios.get(`/movies/${movie_id}`).then(({ data }) => data);
-  }
+  }  */
 
   getAllRates() {
     return this.axios.get("/ratings").then(({ data }) => data);

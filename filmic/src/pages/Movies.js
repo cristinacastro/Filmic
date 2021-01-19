@@ -3,11 +3,15 @@ import Service from "../lib/Service";
 import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
-
 class Movies extends Component {
-  state = {
-    movies: [],
-  };
+    
+  constructor(props){
+    super(props)
+    this.state = {
+      movies: [],
+    };
+  } 
+
 
   componentDidMount() {
     this.getAllMovies();
@@ -18,6 +22,7 @@ class Movies extends Component {
       this.setState({
         movies: data,
       });
+      console.log(this.state.movies, "the movies")
     })
   }
 
@@ -31,11 +36,16 @@ class Movies extends Component {
           {this.state.movies.map((eachMovie) => {
             return (
               <div key={eachMovie.id}>
-              <img src={eachMovie.poster_url} />
-                <p>{eachMovie.title}</p>
-                <Link to={`/movies/${eachMovie._id}`}>See film</Link> 
+              <Link to={{pathname:`/movies/${eachMovie.id}`, state: {moviesState:this.state.movies}}}>
+                <img src={eachMovie.poster_url}/>
+                <h3>{eachMovie.title}</h3>
+                <p>See movie</p>
+                </Link>
+
               </div>
-            );
+            )
+      
+
           })}
         </section>
       </div>
