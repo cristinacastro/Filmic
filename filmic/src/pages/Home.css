@@ -1,5 +1,5 @@
 .slider {
-  width: 90vw;
+  width: 100vw;
   height: 40vh;
   overflow: hidden;
   position: relative;
@@ -19,5 +19,12 @@
 .search-bar {
   width: 80%;
   margin: 0 auto;
-  
 }
+
+.movie-card img{
+ width: 80%;
+}
+
+
+
+

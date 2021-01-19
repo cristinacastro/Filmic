@@ -11,7 +11,7 @@
 body {
   font-family: "Open Sans", "Barlow", sans-serif;
   font-size: 10px;
-  background-color:#111111;
+  background-color:#181818;
   
 }
 
@@ -35,7 +35,8 @@ h2 {
 h3 {
   font-size: 1.8em;
   font-weight: 700;
-  line-height: 1.3em;
+  line-height: 1.6em;
+  padding: 5px 0 10px 0;
 }
 
 h4 {
@@ -366,6 +367,7 @@ p {
 
 a{
   color:rgb(211, 211, 211);
+
 }
 
 .center-div {

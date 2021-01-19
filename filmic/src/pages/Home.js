@@ -62,7 +62,7 @@ class Home extends Component {
           <br></br>
         </section>
 
-        <section className="search-bar pt20">
+        <section className="search-bar pt40 pb20">
           <Search filteredMovie={this.filteredMovie} />
           {this.state.filteredMovie.map((movie) => {
             return (
@@ -79,24 +79,29 @@ class Home extends Component {
             );
           })}
         </section>
-        <section>
-          <h2>Latest releases</h2>
-          {this.state.movies.map((eachMovie) => {
-            return (
-              <div key={eachMovie.id}>
+
+        <section className="movies-list ta">
+          <h3>Latest releases</h3>
+          <div className="card-container w100">
+            {this.state.movies.map((eachMovie) => {
+              return (
                 <Link
                   to={{
                     pathname: `/movies/${eachMovie.id}`,
                     state: { moviesState: this.state.movies },
                   }}
                 >
-                  <img src={eachMovie.poster_url} />
-                  <h3>{eachMovie.title}</h3>
-                  <p>See movie</p>
+                  <div key={eachMovie.id} className="movie-card w100">
+                    <img src={eachMovie.poster_url} />
+                    <div>
+                      <h3 className="pl20 pr20">{eachMovie.title}</h3>
+                      <button className="white-btn mb30">See movie</button>
+                    </div>
+                  </div>
                 </Link>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </section>
       </div>
     );
