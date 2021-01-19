@@ -25,13 +25,16 @@ class AddRating extends Component {
 
   handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    const { score } = this.state;
+    const score = this.state;
+    //console.log(score)
     const { id } = this.props.match.params;
+    //console.log(id)
+
     try {
-      await Service.addNewRate(id, {score});
-      this.setState({ score });
-      console.log("opcion seleccionada", score);
+      const data = Service.addNewRate(id, score);
+      //console.log(data, "resposta")
+      this.setState({ score: data });
+      //console.log("opcion seleccionada", score);
     } catch (error) {
       console.log(error);
     }

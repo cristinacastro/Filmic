@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import { Card, Form, Input, Button, Error } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
+import "./Login.css";
 
 function Login(props) {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -12,8 +13,6 @@ function Login(props) {
   const { setAuthTokens } = useAuth();
   const apiurl =
     "https://front-assignment.planetdataset.com/api/v1/candidates/42b619d4-e3b0-445c-89de-e0cf4261ee5a/users/login";
-
-  const referer = props.location.state.referer || "/";
 
   function postLogin() {
     axios
@@ -35,33 +34,48 @@ function Login(props) {
   }
 
   if (isLoggedIn) {
-    return <Redirect to={referer} />;
+    return <Redirect to="/" />;
   }
 
   return (
-    <Card>
-      <Form>
-        <Input
-          type="email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          placeholder="email"
-        />
-        <Input
-          type="password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          placeholder="password"
-        />
-        <Button onClick={postLogin}>Sign In</Button>
-      </Form>
-      <Link to="/signup">Don't have an account?</Link>
-      {/* {isError && <Error>The email or password provided were incorrect!</Error>} */}
-    </Card>
+    <section className="login-main">
+      <div className="form-backround ta ml30 mr30">
+        <div className="center-div">
+          <h1>Filmic</h1>
+          <h2>Find, enjoy and rate your movies.</h2>
+        </div>
+
+        <form className="center-div">
+          <div>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="Introduce your email"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              placeholder="Introduce your password"
+            />
+          </div>
+          <div className="btn-center mt10">
+            <button onClick={postLogin} className="black-btn">
+              Sign In
+            </button>
+          </div>
+        <Link to="/signup" className="subtitle">Don't have an account?</Link>
+        </form>
+        {/* {isError && <Error>The email or password provided were incorrect!</Error>} */}
+      </div>
+    </section>
   );
 }
 

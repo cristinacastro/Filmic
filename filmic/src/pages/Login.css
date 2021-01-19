@@ -1,0 +1,17 @@
+
+.login-main {
+    height: 100vh;
+    background-image: url("../img/login-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+  }
+
+.login-main form{
+
+}

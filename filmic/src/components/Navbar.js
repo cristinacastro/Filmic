@@ -13,11 +13,8 @@ function Navbar() {
   return (
      <nav className="navbar">
         <ul className="center-div">
-          <Link to='/admin'>
+          <Link to='/'>
             <li>Logo</li>
-          </Link>
-          <Link to='/movies'>
-            <li>My Movies</li>
           </Link>
           <Link to='/ratings'>
             <li>My ratings</li>
