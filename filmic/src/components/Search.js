@@ -19,7 +19,7 @@ class Search extends Component {
           type="text" 
           className="" 
           name="search" 
-          placeholder="Search" 
+          placeholder="Type here to search" 
           value={this.state.search} 
           onChange={this.handleChange} 
         />

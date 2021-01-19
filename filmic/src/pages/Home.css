@@ -1,17 +1,23 @@
-.slider{
-    width: 90vw;
-    height: 40vh;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
+.slider {
+  width: 90vw;
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
 }
 
-.slider img{
-    width: 100vw;
+.slider img {
+  width: 100vw;
 }
 
-.slider-text{
-    position: absolute;
-    top: 30%;
-    left:10%;
+.slider-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.search-bar {
+  width: 80%;
+  margin: 0 auto;
+  
 }

@@ -66,8 +66,9 @@ p {
   font-weight: 400;
   margin: 10px 0px;
   line-height: 18px;
-  color: #383838;
+  color:rgb(211, 211, 211);
 }
+
 .letter-space {
   letter-spacing: 1px;
 }
@@ -364,7 +365,7 @@ p {
 }
 
 a{
-  color:black;
+  color:rgb(211, 211, 211);
 }
 
 .center-div {
@@ -409,10 +410,10 @@ input {
   width: 100%;
   margin-bottom: 10px;
   padding: 18px 50px;
-  border: 2px solid #ebebeb;
-  font-size: 11px;
-  background-color: white;
-  color: #4e4e4e;
+  border: 1px solid #a0a0a0;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #a3a3a3;
   font-weight: 400;
   letter-spacing: 1px;
   box-sizing: border-box;
@@ -425,7 +426,7 @@ select {
   width: 100%;
   font-size: 13px;
   background-color: white;
-  color: #4e4e4e;
+  color: #aaaaaa;
   font-weight: 400;
   letter-spacing: 1px;
   appearance: none;

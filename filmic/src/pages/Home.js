@@ -62,7 +62,7 @@ class Home extends Component {
           <br></br>
         </section>
 
-        <section>
+        <section className="search-bar pt20">
           <Search filteredMovie={this.filteredMovie} />
           {this.state.filteredMovie.map((movie) => {
             return (
