@@ -1,7 +1,7 @@
 import React from 'react'
 import { useAuth } from "../context/auth";
 import { Link } from "react-router-dom";
-
+import "./Navbar.css"
 
 function Navbar() {
     const { setAuthTokens } = useAuth();
@@ -12,15 +12,12 @@ function Navbar() {
 
   return (
      <nav className="navbar">
-        <ul className="center-div">
+        <ul>
           <Link to='/'>
-            <li>Logo</li>
-          </Link>
-          <Link to='/ratings'>
-            <li>My ratings</li>
+            <li><img src="../img/filmicwhite.png" alt="white logo filmic" width="60px"/></li>
           </Link>
           <Link to='/'>
-            <li><button onClick={logOut}>Log out</button></li>
+            <li><button className="logout-btn" onClick={logOut}>Log out</button></li>
           </Link>
         </ul>
       </nav>

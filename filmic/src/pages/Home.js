@@ -3,6 +3,7 @@ import Service from "../lib/Service";
 import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
+import "./Home.css";
 
 class Home extends Component {
   state = {
@@ -48,11 +49,17 @@ class Home extends Component {
     return (
       <div>
         <NavBar />
-        <section>
+        <section className="slider pt100">
+          <img src="../img/signup-background.jpg" />
+          <div className="slider-text">
+            <h2>Escape Room</h2>
+            <button className="white-btn">Discover</button>
+          </div>
+
+          {/* <img src={this.state.randomMovie.poster_url} />
           <h2>{this.state.randomMovie.title}</h2>
-          <Link to={`/movies/${this.state.randomMovie._id}`}>Discover</Link>
+          <Link to={`/movies/${this.state.randomMovie._id}`}>Discover</Link> */}
           <br></br>
-          <img src={this.state.randomMovie.poster_url} />
         </section>
 
         <section>

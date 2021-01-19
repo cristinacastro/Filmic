@@ -39,8 +39,8 @@ function Login(props) {
 
   return (
     <section className="login-main">
-      <div className="form-backround ta ml30 mr30">
-        <div className="center-div">
+      <div className="form-background ta ml30 mr30">
+        <div className="center-div intro">
           <h1>Filmic</h1>
           <h2>Find, enjoy and rate your movies.</h2>
         </div>
@@ -71,7 +71,9 @@ function Login(props) {
               Sign In
             </button>
           </div>
-        <Link to="/signup" className="subtitle">Don't have an account?</Link>
+          <Link to="/signup" className="subtitle">
+            Don't have an account?
+          </Link>
         </form>
         {/* {isError && <Error>The email or password provided were incorrect!</Error>} */}
       </div>

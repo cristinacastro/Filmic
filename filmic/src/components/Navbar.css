@@ -1,0 +1,23 @@
+.navbar{
+    background-color:#111111;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.navbar ul,li, a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.navbar ul{
+    padding: 25px 15px 25px 15px;
+}
+
+.logout-btn{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
