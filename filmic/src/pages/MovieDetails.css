@@ -80,7 +80,7 @@ hr{
 
 @media (min-width: 1024px) {
   .movie-info img {
-    width: 90vw;
+    width:55vw;
     padding-right: 50px;
   }
 
