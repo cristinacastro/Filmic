@@ -31,5 +31,8 @@
     text-transform: uppercase;
     letter-spacing: 1.4px;
     font-weight: 600;
+  }
 
+  .intro h1{
+    width: 100%;
   }

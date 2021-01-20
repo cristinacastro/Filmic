@@ -442,6 +442,13 @@ button a {
   text-align: center;
 }
 
+.main-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: ease-in-out 0.5s;
+}
+
 .white-btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -456,44 +463,14 @@ button a {
   text-align: center;
 }
 
-.fashion-button {
-  border-style: none;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin: 0px 15px 0px;
-  display: flex;
-}
-.fashion-button a {
-  color: black;
-  font-weight: 600;
-}
-.fashion-button a:hover {
-  text-decoration: none;
-}
-.fashion-button hr {
-  border: black 1px solid;
-  width: 20px;
-  margin: 3px auto 25px auto;
-  transition: 0.5s ease-in-out;
-  align-items: center;
-  justify-content: center;
-}
-.fashion-button:hover hr {
-  border: black 1px solid;
-  width: 100%;
-  margin: 3px auto 25px auto;
-}
-.btn-center {
-  display: flex;
-  justify-content: center;
+.white-btn:hover {
+  text-decoration-line: line-through;
 }
 
 .subtitle {
   margin-top: 18px;
   font-size: 12px;
-  color:#dfdfdf;
+  color: #dfdfdf;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
@@ -501,11 +478,11 @@ button a {
 
 .intro {
   width: 85%;
-  padding:20px;
+  padding: 20px;
 }
 
 .intro h2 {
-  padding:0px;
+  padding: 0px;
 }
 
 @media (min-width: 600px) {
@@ -516,6 +493,9 @@ button a {
   h5 {
     font-size: 1.5em;
     padding-top: 30px;
+  }
+  .intro {
+    width: 55%;
   }
 }
 
@@ -536,6 +516,10 @@ button a {
   h6 {
     font-size: 1.5em;
     margin-top: 40px;
+  }
+
+  .intro {
+    width: 40%;
   }
 }
 
