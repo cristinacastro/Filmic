@@ -28,17 +28,17 @@ function Navbar() {
         <Link to="/">
         <li>
             <button className="logout-btn" onClick={logOut}>
-              <img src="./img/user.png" alt="logout icon" width="18px" />
+              <img src="../img/user.png" alt="logout icon" width="18px" />
             </button>
           </li>
         <li>
             <button className="logout-btn" onClick={logOut}>
-              <img src="./img/search.png" alt="logout icon" width="18px" />
+              <img src="../img/search.png" alt="logout icon" width="18px" />
             </button>
           </li>
           <li>
             <button className="logout-btn" onClick={logOut}>
-              <img src="./img/logout.png" alt="logout icon" width="18px" />
+              <img src="../img/logout.png" alt="logout icon" width="18px" />
             </button>
           </li>
         </Link>

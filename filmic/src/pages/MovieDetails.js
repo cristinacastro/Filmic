@@ -47,63 +47,27 @@ export default function MovieDetails(props) {
         />
       </section>
 
-      <section className="cast">
+      <section className="cast pt10">
         <h3>Cast</h3>
         <div className="cast-container pb20">
           <article>
-            <h5>Ellen Burstyn</h5>
             <img src=" ../img/cast_1.jpg" alt="cast profile image" />
+            <h5>Ellen Burstyn</h5>
           </article>
           <article>
-            <h5>Matthew McConaughey</h5>
             <img src=" ../img/cast_2.jpg" alt="cast profile image"/>
+            <h5>Matthew McConaughey</h5>
           </article>
           <article>
-            <h5>Mackenzie Foy</h5>
             <img src=" ../img/cast_3.jpg" alt="cast profile image"/>
+            <h5>Mackenzie Foy</h5>
           </article>
           <article>
-            <h5>John Lithgow</h5>
             <img src=" ../img/cast_4.jpg" alt="cast profile image"/>
+            <h5>John Lithgow</h5>
           </article>
         </div>
       </section>
     </div>
   );
 }
-
-/* class MovieDetails extends Component {
-constructor(props){
-    super(props);
-
-    this.state = {};
-}
-
-  componentDidMount() {
-    this.getTheMovie();
-  }
-
-  getTheMovie () {
-     const {params} = this.props.match
-      console.log(params , "params") 
-    Service.getTheMovie(params.id)
-    .then((data) => {
-        this.setState(data);
-        console.log(data, "the movie")
-      })
-    .catch((err) => console.log(err));
-  }  */
-
-/*  render() {
-    const {title} = this.state
-    return (
-      <div>
-      <NavBar />
-      <div>
-        <h1>El titulo es :{title}</h1>
-        <Link to={"/movies"}>Back to movies</Link>
-    </div>
-    </div>
-    )
-  }
-}  */

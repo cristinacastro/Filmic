@@ -1,4 +1,4 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import "./AddRate.css";
 
 class AddRate extends Component {
@@ -36,9 +36,11 @@ class AddRate extends Component {
             className="rating-form pt10 center-div"
           >
             <div className="ratings-stars">
-              <div className="radio">
+            
+              <div className="radio-item">
                 <label>
                   <input
+                    className="radiobtn"
                     type="radio"
                     value="1"
                     checked={this.state.selectedOption === 1}
@@ -47,9 +49,10 @@ class AddRate extends Component {
                   ★
                 </label>
               </div>
-              <div className="radio">
+              <div className="radio-item">
                 <label>
                   <input
+                    className="radiobtn"
                     type="radio"
                     value="2"
                     checked={this.state.selectedOption === 2}
@@ -58,9 +61,10 @@ class AddRate extends Component {
                   ★★
                 </label>
               </div>
-              <div className="radio">
+              <div className="radio-item">
                 <label>
                   <input
+                    className="radiobtn"
                     type="radio"
                     value="3"
                     checked={this.state.selectedOption === 3}
@@ -69,9 +73,10 @@ class AddRate extends Component {
                   ★★★
                 </label>
               </div>
-              <div className="radio">
+              <div className="radio-item">
                 <label>
                   <input
+                    className="radiobtn"
                     type="radio"
                     value="4"
                     checked={this.state.selectedOption === 4}
@@ -80,9 +85,10 @@ class AddRate extends Component {
                   ★★★★
                 </label>
               </div>
-              <div className="radio">
+              <div className="radio-item">
                 <label>
                   <input
+                    className="radiobtn"
                     type="radio"
                     value="5"
                     checked={this.state.selectedOption === 5}
@@ -92,7 +98,7 @@ class AddRate extends Component {
                 </label>
               </div>
             </div>
-            <button className="white-btn mt20" type="submit">
+            <button className="main-btn mt20" type="submit">
               Submit
             </button>
           </form>

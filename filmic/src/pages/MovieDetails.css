@@ -1,53 +1,69 @@
-.movie-info img{
-    width: 80vw;
+.movie-info img {
+  width: 80vw;
 }
 
-.movie-info, .rate-the-movie, .trailer-display, .cast{
-    width: 80%;
-    margin:0 auto;
+.movie-info,
+.rate-the-movie,
+.trailer-display,
+.cast {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.info-extra{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.5rem;
-    letter-spacing: 0.06rem;
+.info-extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+  letter-spacing: 0.06rem;
 }
 
 iframe {
-    width: 80vw;
-    height: auto;
+  width: 80vw;
+  height: auto;
 }
 
 .cast-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.cast-container article{
-    width: 40%;
-    padding: 10px;
+.cast-container article {
+  width: 40%;
+  padding: 10px;
 }
 
 .cast-container > article > img {
-    width: 100%;
+  width: 100%;
 }
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
+  h1 {
+    width: 85%;
+  }
+  .info-extra {
+    padding-bottom: 20px;
+  }
 
+  iframe {
+    height: 300px;
+  }
+
+  .cast-container article {
+    width: 20%;
+    padding: 10px;
+  }
 }
 
-@media (min-width: 768px){
-  
- 
-
+@media (min-width: 768px) {
+    iframe {
+        height: 400px;
+      }
 }
 
-@media (min-width: 1024px){
-
-
-
+@media (min-width: 1024px) {
 }

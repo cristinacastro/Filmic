@@ -404,6 +404,7 @@ label {
   display: block;
   text-align: center;
 }
+
 input {
   width: 100%;
   margin-bottom: 10px;
@@ -417,26 +418,6 @@ input {
   box-sizing: border-box;
 }
 
-select {
-  font-family: "Open Sans", sans-serif;
-  display: block;
-  margin-bottom: 20px;
-  width: 100%;
-  font-size: 13px;
-  background-color: white;
-  color: #aaaaaa;
-  font-weight: 400;
-  letter-spacing: 1px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 50%;
-  padding: 13px 22px;
-  border: 2px solid #ffffff;
-}
 
 button {
   border: none;
@@ -455,7 +436,7 @@ button a {
   text-transform: uppercase;
   cursor: pointer;
   color: rgb(255, 255, 255);
-  background-color: black;
+  background-color: #181818;
   border: 1px solid rgb(255, 255, 255);
   font-size: 1.5em;
   padding: 15px 25px;
@@ -522,6 +503,13 @@ button a {
   width: 85%;
 }
 
+@media (min-width : 600px){
+  h5{
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 5.5em;
@@ -535,6 +523,7 @@ button a {
     letter-spacing: 0.2em;
     padding: 30px;
   }
+
 }
 
 @media (min-width: 1024px) {
