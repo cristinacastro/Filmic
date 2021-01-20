@@ -1,15 +1,35 @@
 
 .signup-main {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../img/signup.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:black;
-    
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/signup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  
+}
+
+  input {
+    color:#dfdfdf;
+  }
+
+  ::placeholder{
+    color:#dfdfdf;
+    font-size: 0.7em;
+    letter-spacing: 1.4px;
+  }
+
+  .onboard-btn{
+    padding: 10px;
+    background-color: #dfdfdf;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+
   }

@@ -37,14 +37,14 @@ function Login(props) {
   }
 
   return (
-    <section className="login-main">
-      <div className="form-background ta ml30 mr30">
-        <div className="center-div intro">
+    <section className="login-main ">
+      <div className="form-background  ml30 mr30">
+
+        <form className="center-div">
+        <div className="intro ta">
           <h1>Filmic</h1>
           <h2>Find, enjoy and rate your movies.</h2>
         </div>
-
-        <form className="center-div">
           <div>
             <input
               type="email"
@@ -65,13 +65,13 @@ function Login(props) {
               placeholder="Introduce your password"
             />
           </div>
-          <div className="btn-center mt10">
-            <button onClick={postLogin} className="black-btn">
+          <div className="mt10 ">
+            <button onClick={postLogin} className="onboard-btn ">
               Sign In
             </button>
           </div>
           <Link to="/signup" className="subtitle">
-            Don't have an account?
+            Don't have an account? Let's sign Up.
           </Link>
         </form>
         {/* {isError && <Error>The email or password provided were incorrect!</Error>} */}

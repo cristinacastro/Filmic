@@ -13,3 +13,23 @@
     color:black;
     
   }
+
+  input {
+    color:#dfdfdf;
+  }
+
+  ::placeholder{
+    color:#dfdfdf;
+    font-size: 0.7em;
+    letter-spacing: 1.4px;
+  }
+
+  .onboard-btn{
+    padding: 10px;
+    background-color: #dfdfdf;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+
+  }

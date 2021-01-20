@@ -44,12 +44,13 @@ function Signup() {
 
   return (
     <section className="signup-main">
-      <div className="form-background ta ml30 mr30">
-        <div className="center-div intro">
+      <div className="form-background ml30 mr30">
+        <form className="center-div">
+        <div className="ta intro">
           <h1>Filmic</h1>
           <h2>Find, enjoy and rate your movies.</h2>
         </div>
-        <form className="center-div">
+        <div>
           <input
             type="text"
             value={first_name}
@@ -58,6 +59,8 @@ function Signup() {
             }}
             placeholder="First Name"
           />
+          </div>
+          <div>
           <input
             type="text"
             value={last_name}
@@ -66,6 +69,8 @@ function Signup() {
             }}
             placeholder="Last Name"
           />
+          </div>
+          <div>
           <input
             type="email"
             value={email}
@@ -74,6 +79,8 @@ function Signup() {
             }}
             placeholder="email"
           />
+          </div>
+          <div>
           <input
             type="password"
             value={password}
@@ -82,13 +89,14 @@ function Signup() {
             }}
             placeholder="password"
           />
-          <div className="btn-center mt10">
-            <button onClick={postSignup} className="black-btn">Sign up</button>
           </div>
-        </form>
+          <div className="btn-center mt10">
+            <button onClick={postSignup} className="onboard-btn">Sign up</button>
+          </div>
         <Link to="/login" className="subtitle">
-          Already have an account?
+          Already have an account? Let's log in.
         </Link>
+        </form>
         {/*   {isError && <Error>There is some invalid information, please check it out and try again</Error>} */}
       </div>
     </section>
