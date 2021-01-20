@@ -55,10 +55,6 @@ class Home extends Component {
             <h2>Escape Room</h2>
             <button className="white-btn">Discover</button>
           </div>
-
-          {/* <img src={this.state.randomMovie.poster_url} />
-          <h2>{this.state.randomMovie.title}</h2>
-          <Link to={`/movies/${this.state.randomMovie._id}`}>Discover</Link> */}
           <br></br>
         </section>
 
@@ -81,7 +77,20 @@ class Home extends Component {
         </section>
 
         <section className="movies-list ta">
-          <h3>Latest releases</h3>
+        <h4>Nº 4 in Filmic today</h4>
+          <Link to={`/movies/${this.state.randomMovie._id}`}>
+          <div className="movie-card w100">
+            <img src={this.state.randomMovie.poster_url} />
+            <div>
+              <h3>{this.state.randomMovie.title}</h3>
+              <button className="white-btn mb30">See movie</button>
+            </div>
+            </div>
+          </Link>
+        </section>
+
+        <section className="movies-list ta">
+          <h4>Latest releases</h4>
           <div className="card-container w100">
             {this.state.movies.map((eachMovie) => {
               return (

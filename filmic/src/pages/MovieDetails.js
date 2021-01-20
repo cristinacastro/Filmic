@@ -4,7 +4,7 @@ import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import AddRating from "../components/AddRating"
-
+import "./MovieDetails.css"
   
 export default function MovieDetails (props){
   let getMovie = id => props.location.state.moviesState.find(obj => obj.id === id)
