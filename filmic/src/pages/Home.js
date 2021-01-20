@@ -42,8 +42,8 @@ class Home extends Component {
         <section className="slider pt900">
           <img src="../img/signup-background.jpg" alt="cinema entrance" />
           <div className="slider-text">
-            <h2>Escape Room</h2>
-            <button className="main-btn">Discover</button>
+            <h1>Escape Room</h1>
+            <button className="main-btn mt10">Discover</button>
           </div>
           <br></br>
         </section>

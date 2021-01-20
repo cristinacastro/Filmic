@@ -103,10 +103,10 @@ class AddRate extends Component {
             </button>
           </form>
         </section>
-        <section>
+        <section className= "mb30">
           <h6 className=" ta pt10 pb10">
             You rated this movie with{" "}
-            {this.state.selectedOption && this.state.selectedOption}/5
+            {this.state.selectedOption && this.state.selectedOption}/5!
           </h6>
         </section>
       </div>

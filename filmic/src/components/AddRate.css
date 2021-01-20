@@ -9,3 +9,10 @@
     width: 20%;
   }
 }
+
+@media (min-width: 1024px) {
+  .ratings-stars{
+    width: 60%;
+  }
+
+}
