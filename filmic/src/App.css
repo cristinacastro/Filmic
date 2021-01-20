@@ -17,9 +17,10 @@ body {
 
 h1 {
   font-family: "Barlow";
-  font-size: 6em;
+  font-size: 5.5em;
   font-weight: 800;
-  line-height: 1.1em;
+  line-height: 1em;
+  padding:10px 0;
 }
 
 h2 {
@@ -66,10 +67,10 @@ h6 {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 400;
   margin: 10px 0px;
-  line-height: 18px;
+  line-height: 1.5rem;
   color:rgb(211, 211, 211);
 }
 

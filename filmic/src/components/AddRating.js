@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import Service from "../lib/Service";
 import Select from "react-select";
+import "./AddRating.css"
 
 const options = [
   { value: 1, label: "1" },
@@ -42,8 +43,8 @@ class AddRating extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <Fragment>
+      <form className="rating-form" onSubmit={this.handleFormSubmit}>
+        <Fragment >
           <Select
             defaultValue={options[0]}
             isDisabled={false}
@@ -56,7 +57,7 @@ class AddRating extends Component {
             onChange={this.handleChange}
           />
         </Fragment>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" className="rate-input white-btn" />
       </form>
     );
   }

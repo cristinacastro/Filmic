@@ -3,46 +3,43 @@ import Service from "../lib/Service";
 import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import AddRating from "../components/AddRating"
-import "./MovieDetails.css"
-  
-export default function MovieDetails (props){
-  let getMovie = id => props.location.state.moviesState.find(obj => obj.id === id)
-  const {id} = props.match.params
-  console.log(props.location, "props locat")
-  const movieFound = getMovie(id)
-  console.log(movieFound, "pelicula trobada")
+import AddRating from "../components/AddRating";
+import "./MovieDetails.css";
 
-
+export default function MovieDetails(props) {
+  let getMovie = (id) =>
+    props.location.state.moviesState.find((obj) => obj.id === id);
+  const { id } = props.match.params;
+  console.log(props.location, "props locat");
+  const movieFound = getMovie(id);
+  console.log(movieFound, "pelicula trobada");
 
   return (
     <div>
-    <NavBar />
-   
-      <img src={movieFound.poster_url}/>
-      <h1>{movieFound.title}</h1>
-      <p>{movieFound.description}</p>
-      <p>{movieFound.language}</p>
-      <p>{movieFound.year}</p>
-      <p>{movieFound.duration}</p>
-      <p>{movieFound.published_at}</p>
-      <p>{movieFound.url}</p>
+      <NavBar />
+      <section className="movie-info">
+        <img src={movieFound.poster_url} />
+        <div>
+          <h1>{movieFound.title}</h1>
+          <h4>{movieFound.year}</h4>
+          <p>{movieFound.description}</p>
+        </div>
+        <div className="info-extra">
+          <p>{movieFound.language}</p>
+          <p>|</p>
+          <p>{movieFound.duration} min</p>
+          <p>|</p>
+          <p>{movieFound.published_at}</p>
+        </div>
+      </section>
 
-      <div>Valora la película 
-      <AddRating {...props}/></div>
-
-
+      <div className="rate-the-movie">
+        <h5>Rate the movie:</h5>
+        <AddRating {...props} />
+      </div>
     </div>
-  )
+  );
 }
- 
-
-
-
-
-
-
-
 
 /* class MovieDetails extends Component {
 constructor(props){

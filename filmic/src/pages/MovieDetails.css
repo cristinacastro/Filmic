@@ -1,0 +1,15 @@
+.movie-info img{
+    width: 80vw;
+}
+
+.movie-info, .rate-the-movie{
+    width: 80%;
+    margin:0 auto;
+}
+
+.info-extra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
