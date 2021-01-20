@@ -43,7 +43,7 @@ class Home extends Component {
           <img src="../img/signup-background.jpg" alt="cinema entrance" />
           <div className="slider-text">
             <h2>Escape Room</h2>
-            <button className="white-btn">Discover</button>
+            <button className="main-btn">Discover</button>
           </div>
           <br></br>
         </section>
@@ -63,7 +63,7 @@ class Home extends Component {
                     <img src={movie.poster_url} alt="poster movie image" />
                     <div>
                       <h3>{movie.title}</h3>
-                      <button className="white-btn mb30">See movie</button>
+                      <button className="white-btn mb10">See movie</button>
                     </div>
                   </div>
                 </Link>
@@ -87,7 +87,7 @@ class Home extends Component {
                     <img src={eachMovie.poster_url} alt="poster movie image" />
                     <div>
                       <h3 className="pl20 pr20">{eachMovie.title}</h3>
-                      <button className="white-btn mb30">See movie</button>
+                      <button className="white-btn mb10">See movie</button>
                     </div>
                   </div>
                 </Link>

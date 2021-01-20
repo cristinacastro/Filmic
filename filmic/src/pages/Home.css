@@ -1,6 +1,6 @@
 .slider {
   width: 100vw;
-  height: 55vh;
+  height: 50vh;
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -29,7 +29,9 @@
 .movie-card img{
  width: 80%;
 }
-
+.card-container{
+  align-items: flex-start;
+}
 .search-results h3:hover{
  text-decoration-line: line-through;
 }
@@ -53,7 +55,7 @@
     width: 100%;
     justify-content: center;
   }
-  
+
   .movie-card{
     width: 100%;
     padding:10px;
