@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import { Card, Form, Input, Button, Error } from "../components/AuthForms";
 import { useAuth } from "../context/auth";
 import "./Login.css";
 

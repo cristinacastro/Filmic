@@ -8,13 +8,11 @@ import "./Home.css";
 class Home extends Component {
   state = {
     movies: [],
-    randomMovie: [],
     filteredMovie: [],
   };
 
   componentDidMount() {
     this.getAllMovies();
-    this.getRandomMovie();
   }
 
   getAllMovies() {
@@ -37,20 +35,12 @@ class Home extends Component {
     }
   };
 
-  getRandomMovie() {
-    Service.getRandomUnratedMovie().then((data) => {
-      this.setState({
-        randomMovie: data,
-      });
-    });
-  }
-
   render() {
     return (
       <div>
         <NavBar />
-        <section className="slider pt100">
-          <img src="../img/signup-background.jpg" />
+        <section className="slider pt900">
+          <img src="../img/signup-background.jpg" alt="cinema entrance" />
           <div className="slider-text">
             <h2>Escape Room</h2>
             <button className="white-btn">Discover</button>
@@ -69,24 +59,17 @@ class Home extends Component {
                     state: { moviesState: this.state.movies },
                   }}
                 >
-                  {movie.title}
+                  <div key={movie.id} className="movie-card center-div ta pt10">
+                    <img src={movie.poster_url} alt="poster movie image" />
+                    <div>
+                      <h3>{movie.title}</h3>
+                      <button className="white-btn mb30">See movie</button>
+                    </div>
+                  </div>
                 </Link>
               </div>
             );
           })}
-        </section>
-
-        <section className="movies-list ta">
-        <h4>Nº 4 in Filmic today</h4>
-          <Link to={`/movies/${this.state.randomMovie._id}`}>
-          <div className="movie-card w100">
-            <img src={this.state.randomMovie.poster_url} />
-            <div>
-              <h3>{this.state.randomMovie.title}</h3>
-              <button className="white-btn mb30">See movie</button>
-            </div>
-            </div>
-          </Link>
         </section>
 
         <section className="movies-list ta">
@@ -100,8 +83,8 @@ class Home extends Component {
                     state: { moviesState: this.state.movies },
                   }}
                 >
-                  <div key={eachMovie.id} className="movie-card w100">
-                    <img src={eachMovie.poster_url} />
+                  <div key={eachMovie.id} className="movie-card">
+                    <img src={eachMovie.poster_url} alt="poster movie image" />
                     <div>
                       <h3 className="pl20 pr20">{eachMovie.title}</h3>
                       <button className="white-btn mb30">See movie</button>

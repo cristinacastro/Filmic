@@ -14,16 +14,15 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <input 
           type="text" 
-          className="" 
           name="search" 
           placeholder="Type here to search" 
           value={this.state.search} 
           onChange={this.handleChange} 
         />
-      </div>
+      </section>
     )
   }
 }

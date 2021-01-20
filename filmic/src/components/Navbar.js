@@ -13,6 +13,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul>
+      <div className="logo">
         <Link to="/">
           <li>
             <img
@@ -22,13 +23,26 @@ function Navbar() {
             />
           </li>
         </Link>
+        </div>
+        <div className="icons-navbar">
         <Link to="/">
+        <li>
+            <button className="logout-btn" onClick={logOut}>
+              <img src="./img/user.png" alt="logout icon" width="18px" />
+            </button>
+          </li>
+        <li>
+            <button className="logout-btn" onClick={logOut}>
+              <img src="./img/search.png" alt="logout icon" width="18px" />
+            </button>
+          </li>
           <li>
             <button className="logout-btn" onClick={logOut}>
-              <img src="./img/logout.png" alt="logout icon" width="25px" />
+              <img src="./img/logout.png" alt="logout icon" width="18px" />
             </button>
           </li>
         </Link>
+        </div>
       </ul>
     </nav>
   );

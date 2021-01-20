@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Service from "../lib/Service";
 import NavBar from "../components/Navbar";
-import { Link } from "react-router-dom";
 
 class Ratings extends Component {
     

@@ -1,6 +1,6 @@
 .slider {
   width: 100vw;
-  height: 40vh;
+  height: 55vh;
   overflow: hidden;
   position: relative;
   display: inline-block;
@@ -8,6 +8,7 @@
 
 .slider img {
   width: 100vw;
+  height: auto;
 }
 
 .slider-text {
@@ -21,10 +22,67 @@
   margin: 0 auto;
 }
 
+.movie-card{
+  width: 100%;
+}
+
 .movie-card img{
  width: 80%;
 }
 
+.search-results h3:hover{
+ text-decoration-line: line-through;
+}
 
 
+@media (min-width: 600px){
+  .movie-card img{
+    width: 60%;
+   }
+
+  .slider{
+    height: 70vh;
+  }
+}
+
+@media (min-width: 768px){
+  
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .movie-card{
+    width: 100%;
+    padding:10px;
+  }
+
+  .movie-card img{
+    width: 100%;
+  }
+
+  .slider{
+    height: 80vh;
+  }
+
+  .card-container a{
+    width: 45%;
+  }
+  
+}
+
+@media (min-width: 1024px){
+
+.slider{
+  height: 82vh;
+}
+
+.card-container a{
+  width: 20%;
+  padding: 11px;
+}
+
+}
 

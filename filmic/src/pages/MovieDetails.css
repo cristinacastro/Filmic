@@ -2,7 +2,7 @@
     width: 80vw;
 }
 
-.movie-info, .rate-the-movie{
+.movie-info, .rate-the-movie, .trailer-display, .cast{
     width: 80%;
     margin:0 auto;
 }
@@ -12,4 +12,42 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.5rem;
+    letter-spacing: 0.06rem;
+}
+
+iframe {
+    width: 80vw;
+    height: auto;
+}
+
+.cast-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cast-container article{
+    width: 40%;
+    padding: 10px;
+}
+
+.cast-container > article > img {
+    width: 100%;
+}
+
+@media (min-width: 600px){
+
+}
+
+@media (min-width: 768px){
+  
+ 
+
+}
+
+@media (min-width: 1024px){
+
+
+
 }

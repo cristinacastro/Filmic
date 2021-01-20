@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router,Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import { AuthContext } from "./context/auth";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import MovieDetails from "./pages/MovieDetails";
-import Ratings from "./pages/Ratings";
 import './App.css';
 
 function App(props) {
@@ -26,7 +25,6 @@ function App(props) {
           <Route path="/signup" component={Signup} />
           <PrivateRoute exact path="/" component={Home} />
           <PrivateRoute exact path="/movies/:id" component={MovieDetails} />
-          <PrivateRoute path="/ratings" component={Ratings} />
         </div>
       </Router>
     </AuthContext.Provider>
