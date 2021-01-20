@@ -63,7 +63,7 @@ hr {
 }
 
 @media (min-width: 600px) {
-  h1 {
+  .main-info h1 {
     width: 85%;
   }
   .info-extra {
@@ -88,7 +88,7 @@ hr {
 
 @media (min-width: 1024px) {
   .movie-info img {
-    width: 25vw;
+    width: 35vw;
     padding-right: 50px;
   }
 
