@@ -526,7 +526,7 @@ button a {
 
 @media (min-width: 1024px) {
   p {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 2em;
   }
   h2 {
@@ -539,7 +539,7 @@ button a {
   h4 {
     font-size: 2.5em;
     letter-spacing: 0.2em;
-    padding: 30px 0 10px 0;
+    padding: 10px 0 10px 0;
   }
 
   h5 {
