@@ -9,13 +9,13 @@ function WelcomeOutsider(props) {
         <h1>Filmic</h1>
         <h5>Find, enjoy and rate your movies.</h5>
         <div className="onboarding-options">
-          <div>
-            <Link className="main-btn" to="/login">
+          <div className="main-btn">
+            <Link to="/login">
               Login
             </Link>
           </div>
-          <div>
-            <Link className="main-btn" to="/signup">
+          <div className="main-btn">
+            <Link to="/signup">
               Signup{" "}
             </Link>
           </div>
