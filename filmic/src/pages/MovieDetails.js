@@ -16,7 +16,7 @@ export default function MovieDetails(props) {
         <div className="main-info">
           <img
             src={movieFound.poster_url && movieFound.poster_url}
-            alt="poster movie image"
+            alt="movie presentation"
           />
           <div>
             <h1>{movieFound.title && movieFound.title}</h1>
@@ -53,19 +53,19 @@ export default function MovieDetails(props) {
         <h2>Cast</h2>
         <div className="cast-container pb20">
           <article>
-            <img src=" ../img/cast_1.jpg" alt="cast profile image" />
+            <img src=" ../img/cast_1.jpg" alt="cast profile" />
             <h6>Ellen Burstyn</h6>
           </article>
           <article>
-            <img src=" ../img/cast_2.jpg" alt="cast profile image" />
+            <img src=" ../img/cast_2.jpg" alt="cast profile" />
             <h6>Matthew McConaughey</h6>
           </article>
           <article>
-            <img src=" ../img/cast_3.jpg" alt="cast profile image" />
+            <img src=" ../img/cast_3.jpg" alt="cast profile" />
             <h6>Mackenzie Foy</h6>
           </article>
           <article>
-            <img src=" ../img/cast_4.jpg" alt="cast profile image" />
+            <img src=" ../img/cast_4.jpg" alt="cast profile" />
             <h6>John Lithgow</h6>
           </article>
         </div>

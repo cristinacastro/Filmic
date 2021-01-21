@@ -15,7 +15,7 @@ body {
 
 h1 {
   font-family: "Barlow";
-  font-size: 5.5em;
+  font-size: 4em;
   font-weight: 800;
   line-height: 1em;
   padding: 10px 0;
@@ -461,6 +461,7 @@ button a {
   font-size: 1.5em;
   padding: 13px 13px;
   text-align: center;
+
 }
 
 .white-btn:hover {
@@ -486,6 +487,9 @@ button a {
 }
 
 @media (min-width: 600px) {
+  h1{
+    font-size: 5em;
+  }
   h5 {
     font-size: 1em;
     text-align: center;
@@ -525,20 +529,25 @@ button a {
 
 @media (min-width: 1024px) {
   p {
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 2em;
   }
+
+  h1{
+    font-size: 5.5em;
+  }
+
   h2 {
-    font-size: 4.5em;
+    font-size: 3.5em;
     padding: 50px 0 30px 0;
   }
   h3 {
-    font-size: 2.3em;
+    font-size: 2em;
   }
   h4 {
     font-size: 2.5em;
     letter-spacing: 0.2em;
-    padding: 30px 0 10px 0;
+    padding: 10px 0 10px 0;
   }
 
   h5 {
@@ -554,7 +563,7 @@ button a {
   }
 
   .white-btn {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 10px;
   }
 }

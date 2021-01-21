@@ -6,11 +6,12 @@ import Search from "../components/Search";
 import "./Home.css";
 
 class Home extends Component {
+  
   state = {
     movies: [],
     filteredMovie: [],
   };
-
+  
   componentDidMount() {
     this.getAllMovies();
   }
@@ -60,7 +61,7 @@ class Home extends Component {
                   }}
                 >
                   <div key={movie.id} className="movie-card center-div ta pt10">
-                    <img src={movie.poster_url} alt="poster movie image" />
+                    <img src={movie.poster_url} alt="movie presentation" />
                     <div>
                       <h3>{movie.title}</h3>
                       <button className="white-btn mb10">See movie</button>
@@ -84,7 +85,7 @@ class Home extends Component {
                   }}
                 >
                   <div key={eachMovie.id} className="movie-card">
-                    <img src={eachMovie.poster_url} alt="poster movie image" />
+                    <img src={eachMovie.poster_url} alt="movie presentation" />
                     <div>
                       <h3 className="pl20 pr20">{eachMovie.title}</h3>
                       <button className="white-btn mb10">See movie</button>
