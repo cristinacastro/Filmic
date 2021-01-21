@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import { AuthContext } from "./context/auth";
@@ -26,8 +26,8 @@ function App(props) {
           <Route exact path ="/" component={WelcomeOutsider}/>
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route exact path="/movies" component={Home} />
-          <Route exact path="/movies/:id" component={MovieDetails} />
+          <PrivateRoute exact path="/movies" component={Home} />
+          <PrivateRoute exact path="/movies/:id" component={MovieDetails} />
         </div>
       </Router>
     </AuthContext.Provider>
