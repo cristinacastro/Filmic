@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
 import "./WelcomeOutsider.css";
 
 function WelcomeOutsider(props) {
@@ -10,14 +9,10 @@ function WelcomeOutsider(props) {
         <h5>Find, enjoy and rate your movies.</h5>
         <div className="onboarding-options">
           <div className="main-btn">
-            <Link to="/login">
-              Login
-            </Link>
+            <a href="/login">Login</a>
           </div>
           <div className="main-btn">
-            <Link to="/signup">
-              Signup{" "}
-            </Link>
+            <a href="/signup">Signup</a>
           </div>
         </div>
       </div>
